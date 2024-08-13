@@ -137,4 +137,4 @@ if(NOT WIN32)
 endif()
 
 add_definitions_with_host_compiler("-DCL_TARGET_OPENCL_VERSION=300")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsycl")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsycl -fsycl-llc-options=\"-target-abi=lp64d -mcpu=sifive-u54\"")
